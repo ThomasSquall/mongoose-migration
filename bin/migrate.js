@@ -188,6 +188,7 @@ function migrate(direction, cb, number_of_migrations) {
 function loopMigrations(direction, migrations, cb) {
 
   if (direction == 0 || migrations.length == 0) {
+    success('Migration finished successfully');
     return cb();
   }
 
