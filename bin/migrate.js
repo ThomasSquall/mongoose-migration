@@ -71,8 +71,9 @@ function timestampConfiguration() {
   try {
     return require(timestamp_path);
   } catch (e) {
-    var data = JSON.stringify({ current_timestamp: 0 }, null, 2);
+      var data = JSON.stringify({ current_timestamp: 0 }, null, 2);
       fs.writeFileSync(timestamp_path, data);
+      return data;
   }
 }
 
