@@ -7,8 +7,6 @@ var slug = require('slug');
 var path = require('path');
 var fs = require('fs');
 
-console.log('folder: ' + process.cwd());
-
 var config_path = process.cwd() + '/.migrate.js';
 
 var CONFIG;
@@ -158,7 +156,6 @@ function getTimestamp(name) {
 }
 
 function migrate(direction, cb, number_of_migrations) {
-  console.log('Here I am');
   CONFIG = loadConfiguration();
   timestamp_CONFIG = timestampConfiguration();
   
